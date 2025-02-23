@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "YThideElements",
+  "version": "1.0",
+  "description": "Hides recommendation section on youtube.com",
+  "icons": {
+    "48": "icons/black-circle.svg"  
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*"
+      ],
+      "js": [
+        "ui-changes.js"
+      ]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "blahblah@blah"
+    }
+  },
+  "browser_action": {
+    "default_icon": {
+      "48": "icons/black-circle.svg"
+    },
+    "default_popup": "popup.html",
+    "default_area": "navbar"
+  }
+}
