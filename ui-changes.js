@@ -1,5 +1,5 @@
 /** HTML elements we want to find */
-const tags = ["ytd-watch-next-secondary-results-renderer", "ytd-item-section-renderer"];
+const tags = ["ytd-watch-next-secondary-results-renderer"];
 
 /** Finds element in the changes array */
 const findTagIn = (mutation) => {
@@ -47,6 +47,5 @@ setTimeout(() => {
   const foundTags = findTagsInDocument();
   if (foundTags.length > 0) {
     applyCss(foundTags);
-    tags = tags.filter(tag => !foundTags.some(node => node.tagName.toLowerCase() === tag));
   }
 }, 1000);
