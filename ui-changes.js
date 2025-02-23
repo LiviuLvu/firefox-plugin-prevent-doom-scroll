@@ -5,7 +5,7 @@ const tags = ["ytd-watch-next-secondary-results-renderer", "ytd-item-section-ren
 const findTagIn = (mutation) => {
   if (mutation.addedNodes.length > 0) {
     return Array.from(mutation.addedNodes).filter(node => {
-      return tags.includes(node.tagName.toLowerCase());
+      return tags.includes(node.tagName?.toLowerCase());
     });
   } else return [];
 };
